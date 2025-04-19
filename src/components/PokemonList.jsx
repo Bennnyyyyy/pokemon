@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './PokemonList.css';  // Create this file!
+import './PokemonList.css';
 
-const PokemonList = () => {
+const PokemonList = ({ onSelectPokemon }) => {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -23,16 +23,20 @@ const PokemonList = () => {
 
   return (
     <div className="pokemon-list-container">
-      <h1>Pokémon List</h1>
+      <h1>Select Your Pokémon</h1>
       <div className="pokemon-grid">
         {pokemon.map(poke => (
-          <div className="pokemon-card" key={poke.id}>
+          <div
+            className="pokemon-card"
+            key={poke.id}
+            onClick={() => onSelectPokemon(poke)}
+          >
             <img src={poke.sprites.front_default} alt={poke.name} />
             <h3>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h3>
             <div className="stats">
-              <p>HP: {poke.stats[0].base_stat}</p>
-              <p>Attack: {poke.stats[1].base_stat}</p>
-              <p>Defense: {poke.stats[2].base_stat}</p>
+              <p>❤️ HP: {poke.stats[0].base_stat}</p>
+              <p>⚔️ Attack: {poke.stats[1].base_stat}</p>
+              <p>🛡️ Defense: {poke.stats[2].base_stat}</p>
             </div>
           </div>
         ))}

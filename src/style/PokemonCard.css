@@ -1,0 +1,28 @@
+.pokemon-card {
+    width: 200px;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pokemon-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .fire { background: #F08030; }
+  .water { background: #6890F0; }
+  .grass { background: #78C850; }
+  .electric { background: #F8D030; }
+  .psychic { background: #F85888; }
+  .normal { background: #A8A878; }
+  .fighting { background: #C03028; }
+  

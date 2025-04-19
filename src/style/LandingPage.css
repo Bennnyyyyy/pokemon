@@ -1,0 +1,27 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #0a285f, #2a75bb);
+    color: #ffcc00;
+    text-shadow: 2px 2px #2a75bb;
+  }
+  
+  .begin-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background: #ffcc00;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2a75bb;
+    transition: all 0.3s ease;
+  }
+  
+  .begin-btn:hover {
+    background: #ffdd33;
+  }
+  
